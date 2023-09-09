@@ -25,14 +25,23 @@
     <!-- form -->
     <form class="mt-3">
       <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Book Title">
+        <div class="col-5">
+          <input type="text" class="form-control" placeholder="Book Title" required>
         </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Author Name">
+        <div class="col-5">
+          <input type="text" class="form-control" placeholder="Author Name" required>
+        </div>
+        <div class="col-2">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Not Read</option>
+            <option value="1">Read</option>
+          </select>
         </div>
       </div>
+      <button type="button submit" class="submit btn btn-primary">Submit</button>
     </form>
+
+    <!-- table of books (list or cards) -->
 
   </div>
 

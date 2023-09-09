@@ -55,3 +55,12 @@ table {
 .navbar-brand {
   font-size: 40px;
 }
+
+.bg-body-tertiary {
+  background-color: white!important;
+}
+
+button.submit {
+  margin-top: 2%;
+  width: 120px;
+}
