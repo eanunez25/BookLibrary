@@ -12,8 +12,10 @@ function addBookToLibrary() {
 
   if (bookTitle == "") {
     alert("Missing Input")
+    return
   } else if (author == "") {
     alert("Missing Input")
+    return
   } else {
     let book = {title:bookTitle, author: author, read:read}
     myLibrary.push(book)
@@ -25,7 +27,6 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-
   let book = myLibrary[myLibrary.length - 1]
 
   let table = document.getElementById("table")
