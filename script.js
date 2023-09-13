@@ -1,4 +1,5 @@
 const myLibrary = []
+let table = document.getElementById("table")
 
 function Book() {
 
@@ -19,7 +20,6 @@ function addBookToLibrary() {
   } else {
     let book = {title:bookTitle, author: author, read:read}
     myLibrary.push(book)
-    // console.log(myLibrary)
     form.reset()
   }
 
@@ -29,7 +29,7 @@ function addBookToLibrary() {
 function displayBooks() {
   let book = myLibrary[myLibrary.length - 1]
 
-  let table = document.getElementById("table")
+
   let body = document.getElementById("body")
 
   let row = document.createElement("tr")
@@ -54,14 +54,14 @@ function displayBooks() {
   deleteBook = document.getElementsByClassName('btn-danger')
 }
 
-function deleteRow() {
-  console.log('hi')
-}
-
 const submit = document.getElementById("submit")
 submit.addEventListener("click", addBookToLibrary)
 
-
-for (const button of deleteBook) {
-  button.addEventListener("click", deleteRow);
-}
+table.addEventListener("click", function (e) {
+  if (e.target.classList.contains("btn-danger")) {
+    const row = e.target.closest("tr"); // Find the closest table row (tr)
+    if (row) {
+      row.remove(); // Remove the row from the table
+    }
+  }
+})
