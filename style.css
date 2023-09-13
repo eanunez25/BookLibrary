@@ -68,3 +68,11 @@ button.submit {
 .table {
   margin-top: 5%;
 }
+
+.btn-info {
+  width: 60%;
+}
+
+.btn-warning {
+  width: 60%;
+}

@@ -40,16 +40,28 @@ function displayBooks() {
 
   titleRow.innerHTML = book.title
   authorRow.innerHTML = book.author
-  statusRow.innerHTML = book.read
+  statusRow.innerHTML = `<button class="btn btn-info">${book.read}</button>`
+  deleteRow.innerHTML = '<button class="btn btn-danger">Delete</button>'
 
   row.appendChild(titleRow)
   row.appendChild(authorRow)
   row.appendChild(statusRow)
+  row.appendChild(deleteRow)
 
   body.appendChild(row)
   table.appendChild(body)
+
+  deleteBook = document.getElementsByClassName('btn-danger')
+}
+
+function deleteRow() {
+  console.log('hi')
 }
 
 const submit = document.getElementById("submit")
 submit.addEventListener("click", addBookToLibrary)
 
+
+for (const button of deleteBook) {
+  button.addEventListener("click", deleteRow);
+}
