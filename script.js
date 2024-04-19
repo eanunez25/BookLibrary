@@ -65,3 +65,11 @@ table.addEventListener("click", function (e) {
     }
   }
 })
+
+table.addEventListener("click", function (e) {
+  if(e.target.innerHTML === "Not Read") {
+    e.target.innerHTML = "Read"
+  } else {
+    e.target.innerHTML = "Not Read"
+  }
+})
